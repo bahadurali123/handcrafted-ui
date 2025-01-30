@@ -60,8 +60,8 @@ import PrivacyPolicy from "./main_pages_components/Privacypolicy.component";
 import TermsAndConditions from "./main_pages_components/Termsandconditions.component";
 import PaypalButtons from "./main_pages_components/Paypal.component";
 import StripeButton from "./main_pages_components/Stripe.component";
-import OrderSuccess from "./main_pages_components/ordersuccess.component";
-import OrderCancel from "./main_pages_components/ordercancel.component";
+import OrderSuccess from "./main_pages_components/Ordersuccess.component"
+import OrderCancel from "./main_pages_components/Ordercancel.component"
 
 import Stats from "./admin_dashboard/Dashboard_components/Stats.component";
 import AdminHeader from "./admin_dashboard/Header.component";
