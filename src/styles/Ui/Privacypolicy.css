@@ -1,0 +1,30 @@
+.privacy-policy-container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.privacy-policy-title {
+    font: var(--heading_large);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color-light);
+}
+
+.privacy-policy-content {
+    font: var(--txt_medium);
+    color: var(--secondary-color-dark);
+}
+
+.privacy-policy-content h2 {
+    margin-top: 20px;
+    text-align: left;
+    font: var(--heading_medium);
+    color: var(--secondary-color-dark);
+}
+
+@media (max-width: 768px) {
+    .privacy-policy-container {
+        padding: 15px;
+    }
+}

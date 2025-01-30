@@ -1,0 +1,59 @@
+.add-blog-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font: var(--heading_large);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color-light);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+
+.row .form-group {
+    width: 48%;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    font: var(--txt_medium);
+}
+
+.btn-section {
+    justify-content: center;
+}
+
+.error-message {
+    color: red;
+    font: var(--txt_small);
+}
+
+
+.action-button {
+    text-align: right;
+    cursor: pointer;
+}

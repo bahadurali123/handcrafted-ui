@@ -1,0 +1,204 @@
+/* About Page Layout */
+.about-page {
+    width: 100%;
+    margin: 0 auto;
+    font: var(--txt_medium);
+    padding-bottom: 2rem;
+    font: var(--txt_medium);
+}
+
+/* Our Story */
+.story-section {
+    margin: 50px 20px;
+    text-align: center;
+}
+
+.story-section h3 {
+    margin-bottom: 20px;
+    font: var(--heading_large);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color-light);
+}
+
+.story-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.story-items p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: var(--txt_medium);
+    color: var(--secondary-color-dark);
+}
+
+.story-items img {
+    background: url('/Handcrafted_Table.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #f6f4f4;
+}
+
+/* Artisans Bios */
+.artisans-bios-section {
+    margin: 50px 10px;
+    text-align: center;
+}
+
+.artisans-bios-section h3 {
+    margin-bottom: 20px;
+    font: var(--heading_large);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color-light);
+}
+
+.artisans-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 10px;
+    font: var(--txt_medium);
+    color: var(--secondary-color-dark);
+}
+
+.artisan {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color-dark);
+}
+
+.artisan:hover {
+    border: none;
+    box-shadow: 3px 3px 13px var(--secondary-color-light);
+}
+
+.artisans-list .artisan-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f6f4f4;
+}
+
+.artisans-list .artisan-name {
+    font: var(--heading_medium);
+    font-weight: var(--font-weight-bold);
+}
+
+.artisans-list .artisan-bio {
+    margin-top: 5px;
+}
+
+.artisans-list .artisan-quot {
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* Studio Container */
+.studio-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.studio-title {
+    font: var(--heading_large);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 20px;
+}
+
+/* Carousel Structure */
+.studio-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px 0px;
+    /* background-color: #8f8b8b; */
+}
+
+.scroll-btn {
+    background: var(--secondary-color-dark);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+/* Item Styling */
+.studio-items {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    max-height: 550px;
+    /* background-color: #fae0e0; */
+}
+
+.studio-item {
+    flex: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+    box-sizing: border-box;
+}
+
+.studio-item--center {
+    transform: scale(1.2);
+    flex: 1.5;
+    z-index: 2;
+}
+
+.studio-media {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 950px) {
+    .studio-media {
+        max-height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .artisans-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .studio-media {
+        max-height: 250px;
+    }
+
+    .studio-item {
+        padding: 50px 2px;
+    }
+}
+
+@media (max-width: 600px) {
+    .story-items {
+        grid-template-columns: 1fr;
+    }
+
+    .artisans-list {
+        grid-template-columns: 1fr;
+    }
+
+    .studio-media {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .studio-media {
+        max-height: 150px;
+    }
+}

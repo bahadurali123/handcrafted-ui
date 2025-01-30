@@ -1,0 +1,28 @@
+.error-page {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 50px;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-page img {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.error-page h1 {
+    font: var(--heading_large);
+    font-weight: var(--font-weight-bold);
+    color: var(--secondary-color-dark);
+}
+
+.error-page p {
+    font: var(--txt_medium);
+    color: var(--secondary-color-dark);
+    margin-bottom: 20px;
+}

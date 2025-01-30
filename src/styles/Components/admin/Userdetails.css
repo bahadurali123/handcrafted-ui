@@ -1,0 +1,81 @@
+.user-details-container {
+    margin: 20px;
+    font: var(--txt_medium);
+}
+
+.user-header {
+    font: var(--heading_large);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color-light);
+    display: flex;
+}
+
+.account-info,
+.shipping-addresses,
+.order-history,
+.wishlist {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.order-history h3,
+.wishlist h3,
+h3 {
+    margin-bottom: 10px;
+    font: var(--heading_medium);
+    font-weight: var(--font-weight-bold);
+}
+
+.order-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-history th,
+.order-history td {
+    padding: 10px;
+    text-align: left;
+}
+
+.order-history th {
+    background-color: #e9ecef;
+    font-weight: 500;
+}
+
+.order-history td {
+    border-bottom: 1px solid #ddd;
+}
+
+.edit-account-button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* SingleOrder */
+.single-order-row td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* SingleAddress */
+p {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .user-details-container {
+        margin: 10px;
+    }
+
+    .order-history table {
+        font-size: 0.9rem;
+    }
+
+    .edit-account-button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,89 @@
+/* General Layout */
+.orders-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+/* Section 1: Header */
+.orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.orders-header h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Section 2: Table */
+.orders-table-container {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font: var(--txt_medium);
+}
+
+.orders-table th,
+.orders-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.orders-table th {
+    background: #eaeaea;
+    color: #555;
+}
+
+.orders-table tr:hover {
+    background: #f1f1f1;
+}
+
+.details-button {
+    background-color: #333;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.details-button:hover {
+    background-color: #555;
+}
+
+/* Section 3: Pagination */
+.orders-pagination {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .orders-header h1 {
+        font-size: 1.2rem;
+    }
+
+    .details-button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}

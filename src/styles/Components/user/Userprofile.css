@@ -1,0 +1,38 @@
+.user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #F8F8F8;
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.user-info h2 {
+    font: var(--heading_medium);
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    text-transform: capitalize;
+}
+
+.user-info p {
+    font: var(--txt_medium);
+    /* color: #4A4E69; */
+    margin: 5px 0;
+}
+
+.edit-icon i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--secondary-color-dark);
+    transition: color 0.3s ease, color 0.3s ease;
+}
+
+.edit-icon i:hover {
+    color: var(--primary-color-light);
+}

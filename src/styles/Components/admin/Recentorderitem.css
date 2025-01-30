@@ -1,0 +1,16 @@
+.stacked-images {
+    display: flex;
+    align-items: center;
+}
+
+.product-image-stack {
+    position: relative;
+    margin-left: -10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+}
+
+.product-image-stack img {
+    border-radius: 100px;
+}

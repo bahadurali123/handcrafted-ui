@@ -1,0 +1,30 @@
+.terms-container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.terms-title {
+    font: var(--heading_large);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color-light);
+}
+
+.terms-content {
+    font: var(--txt_medium);
+}
+
+.terms-content h2 {
+    font: var(--heading_medium);
+    font-weight: var(--font-weight-bold);
+    text-align: left;
+    margin: 10px 0px;
+    color: var(--secondary-color-dark);
+}
+
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 15px;
+    }
+}

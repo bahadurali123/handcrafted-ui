@@ -1,0 +1,132 @@
+.header-container {
+    display: flex;
+    position: sticky;
+    top: 0vh;
+    z-index: 100;
+}
+
+.page-title {
+    display: flex;
+    text-align: left;
+}
+
+.page-title h2 {
+    color: var(--primary-color-light);
+    font: var(--heading_large);
+    font-weight: var(--font-weight-bold);
+}
+
+.top-header {
+    width: 100%;
+    height: 60px;
+    background-color: var(--secondary-color-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.top-icons,
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.bell-icon {
+    font-size: 24px;
+    margin-right: 20px;
+    color: var(--primary-color-light);
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    background-image: url('../../../assets/HandcraftedFurniture.jpg');
+    background-size: cover;
+
+    /* display: flex; */
+    /* justify-content: flex-start; */
+}
+
+.profile-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.menu-icon {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary-color-light);
+}
+
+/* SideNav Styles */
+.side-nav {
+    width: 250px;
+    background-color: var(--secondary-color-dark);
+    color: var(--primary-color-light);
+    font: var(--heading_medium);
+    position: fixed;
+    /* top: 0; */
+    top: 60px;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.side-nav.closed {
+    transform: translateX(-100%);
+}
+
+.side-nav.open {
+    transform: translateX(0);
+}
+
+.side-nav-links {
+    list-style-type: none;
+    padding: 10px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.side-nav-links li {
+    padding: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.side-nav-links li:hover {
+    background-color: var(--secondary-color-light);
+    padding-left: 10px;
+    transition: padding-left 0.3s ease;
+}
+
+.side-nav-links a {
+    display: block;
+    color: var(--primary-color-light);
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .side-nav {
+        width: 200px;
+    }
+}

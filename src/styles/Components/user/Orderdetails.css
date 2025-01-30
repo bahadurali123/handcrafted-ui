@@ -1,0 +1,43 @@
+
+.order-details {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.order-heading {
+    font: var(--heading_large);
+    margin-bottom: 20px;
+    font-weight: var(--font-weight-bold);
+}
+.order-product-heading {
+    font: var(--heading_medium);
+    margin-bottom: 20px;
+    font-weight: var(--font-weight-bold);
+}
+.order-info {
+    background-color: #e2e2e2;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    font: var(--txt_medium);
+}
+
+.order-info p {
+    margin: 5px 0;
+}
+
+.download-invoice {
+    padding: 10px 15px;
+    background-color: #4A4E69;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.products-list {
+    margin-top: 20px;
+}

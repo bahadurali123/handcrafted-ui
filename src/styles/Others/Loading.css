@@ -1,0 +1,40 @@
+.spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    width: 100%;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: conic-gradient(from 90deg,
+            rgba(34, 34, 59, 0) 220deg,
+            rgba(34, 34, 59, 0.8) 270deg,
+            rgba(34, 34, 59, 1) 320deg,
+            rgba(34, 34, 59, 0.8) 360deg);
+    mask: radial-gradient(circle, transparent 40%, var(--primary-color-light) 45%);
+    -webkit-mask: radial-gradient(circle, transparent 40%, var(--primary-color-light) 45%);
+    animation: rotate 1.5s linear infinite;
+}
+
+/* Animation for spinning */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .loading-spinner {
+        width: 40px;
+        height: 40px;
+    }
+}

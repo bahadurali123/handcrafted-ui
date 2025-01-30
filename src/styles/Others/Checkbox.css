@@ -1,0 +1,24 @@
+/* Wrapper for checkbox and label */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Checkbox input styles */
+  .signin-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 2px solid var(--secondary-color-dark);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Label styles */
+  .signin-checkbox-label {
+    font: var(--txt_small);
+    color: var(--secondary-color-dark);
+    cursor: pointer;
+  }
+  

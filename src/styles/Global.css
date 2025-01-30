@@ -1,0 +1,76 @@
+:root {
+    /* Typography */
+    --font-heading: 'Noto Sans Bengali', sans-serif;
+    --font-body: 'Noto Sans', sans-serif;
+    --font-cta: 'Noto Sans', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Primary Colors */
+    --primary-color-light: #D4A373;
+    --primary-color-dark: #8A7E66;
+
+    /* Secondary Colors */
+    --secondary-color-light: #4A4E69;
+    --secondary-color-dark: #22223B;
+
+    /* Text Colors */
+    --text-color-body: #333;
+    /* Default body text color */
+    --text-color-heading: #222;
+    /* Default heading color */
+    --text-color-cta: #FFF;
+    /* Call-to-action text color (usually white on a button) */
+
+    /* Background Colors */
+    --background-color: #F9F9F9;
+    /* Background color for body */
+
+    /* Button Styles */
+    --cta-bg-color: var(--primary-color-dark);
+    /* CTA (Call-to-action) button background */
+    --cta-hover-bg-color: var(--primary-color-light);
+    /* CTA button hover background */
+    --cta-text-color: var(--text-color-cta);
+    /* CTA button text color */
+
+    /* Font Sizes */
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+    --font-size-md: 18px;
+    --font-size-lg: 24px;
+    --font-size-xl: 32px;
+
+    /* Line Heights */
+    --line-height-base: 1.6;
+    --line-height-heading: 1.3;
+
+    /* Responsive Breakpoints */
+    --breakpoint-xs: 480px;
+    --breakpoint-sm: 768px;
+    --breakpoint-md: 1024px;
+    --breakpoint-lg: 1200px;
+
+
+    /* ............ */
+    --heading_small: max(15px, 1.5vw) / max(19px, 2vw) var(--font-heading);
+    --heading_medium: max(19px, 2vw) / max(28px, 2.5vw) var(--font-heading);
+    --heading_large: max(28px, 2.5vw) / max(38px, 3vw) var(--font-heading);
+
+    --txt_small: max(12px, 1.2vw) / max(15px, 1.5vw) var(--font-body);
+    --txt_medium: max(15px, 1.5vw) / max(24px, 2vw) var(--font-body);
+    --txt_large: max(24px, 2vw) / max(32px, 2.5vw) var(--font-body);
+
+    --h1: bold max(28px, 3vw) / max(35px, 4vw) var(--font);
+    --h2: bold max(24px, 2.5vw) / max(30px, 3.5vw) var(--font);
+    --h3: bold max(20px, 2vw) / max(25px, 3vw) var(--font);
+    --h4: bold max(18px, 1.8vw) / max(22px, 2.5vw) var(--font);
+    --h5: bold max(16px, 1.6vw) / max(20px, 2.2vw) var(--font);
+    --h6: bold max(14px, 1.4vw) / max(18px, 2vw) var(--font);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

@@ -1,0 +1,11 @@
+.orders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+.orders  {
+    font: var(--heading_medium);
+}

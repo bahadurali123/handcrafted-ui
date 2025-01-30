@@ -1,0 +1,151 @@
+.blog-posts-wrapper {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font: var(--txt_medium);
+}
+
+.blog-posts-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.add-btn,
+.filter-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-btn {
+    background-color: #343a40;
+    color: white;
+}
+
+.filter-btn {
+    background-color: transparent;
+    color: #343a40;
+    font-size: 18px;
+}
+
+.blog-posts-table {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.table-header span {
+    width: 20%;
+    text-align: left;
+}
+
+.table-header .Blog-title {
+    width: 30%;
+}
+
+.table-header .action-btn {
+    width: 10%;
+    text-align: center;
+}
+
+.blog-post-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-post-item span {
+    width: 20%;
+    text-align: left;
+}
+
+.blog-post-item .Blog-title {
+    width: 30%;
+}
+
+.blog-post-item .action-btn {
+    width: 10%;
+    text-align: center;
+}
+
+.action-btn {
+    text-align: right;
+    cursor: pointer;
+}
+
+
+/* blog posts items */
+.blog-post-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.blog-post-item span {
+    width: 20%;
+    text-align: left;
+}
+
+.action-btn {
+    text-align: right;
+    cursor: pointer;
+}
+
+.actions-popup {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.actions-popup button {
+    display: block;
+    width: 100%;
+    /* padding: 10px;
+    border: none; */
+    /* background-color: var(--secondary-color-dark);
+    color: var(--primary-color-light); */
+    /* cursor: pointer; */
+}
+
+.actions-popup button:hover {
+    /* background-color: #f9f9f9; */
+}
+
+
+
+@media (max-width: 768px) {
+    .blog-post-item span {
+        font-size: 0.9rem;
+    }
+
+    .table-header span {
+        font-size: 0.9rem;
+    }
+
+    .add-btn,
+    .filter-btn {
+        font-size: 0.9rem;
+    }
+
+    .blog-posts-wrapper {
+        padding: 10px;
+    }
+}

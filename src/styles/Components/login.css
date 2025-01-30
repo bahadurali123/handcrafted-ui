@@ -1,0 +1,111 @@
+/* Background styling */
+.signin-container {
+    background-image: url('../../assets/HandcraftedFurniture.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.signin-box {
+    background-image: url('../../assets/HandcraftedFurniture.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #e0ded63e;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    font: var(--txt_medium);
+}
+
+.signin-heading {
+    font-family: "Noto Sans Bengali", sans-serif;
+    /* color: #22223B; */
+    color: var(--secondary-color-dark);
+    /* font-size: 28px; */
+    font: var(--heading_large);
+    text-align: center;
+    /* font-weight: bold; */
+    font-weight: var(--font-weight-bold);
+}
+
+.recaptcha-container {
+    margin: 1rem 0;
+}
+
+.btns-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forgot-password {
+    /* color: #22223B; */
+    color: var(--secondary-color-dark);
+    font-weight: 600;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.link {
+    /* font-family: "Noto Sans", sans-serif; */
+    /* color: #22223B; */
+    color: var(--secondary-color-dark);
+    /* font-weight: 800; */
+    font: var(--font-cta);
+    font-weight: var(--font-weight-bold);
+}
+
+.signup-link {
+    /* color: #22223B; */
+    color: var(--secondary-color-dark);
+    /* font-family: "Noto Sans", sans-serif; */
+    font: var(--font-cta);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    margin: 0.5rem 0;
+    font: var(--txt_medium);
+}
+
+/* Verification Component */
+.verify-box {
+    background-image: url('../../assets/HandcraftedFurniture.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #e0ded63e;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    font: var(--txt_medium);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.verify-heading {
+    color: var(--secondary-color-dark);
+    font: var(--text_medium);
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+}
+.verify-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    text-align: center;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .signin-box {
+        width: 90%;
+    }
+}

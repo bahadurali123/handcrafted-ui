@@ -1,0 +1,130 @@
+/* Home Page Layout */
+.home-page {
+    width: 100%;
+    margin: 0 auto;
+    font: var(--txt_medium);
+    padding-bottom: 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font: var(--heading_large);
+    font-weight: var(--font-weight-bold);
+    color: var(--secondary-color-dark);
+    background-color: #f5d79a7a;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+/* Categories Section */
+.categories-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Featured Products */
+.featured-products {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.featured-products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+    margin: 15px;
+}
+
+/* Featured Blogs */
+.featured-blogs {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.featured-blogs-list {
+    display: flex;
+    margin: 15px;
+    gap: 10px;
+}
+
+/* User Satisfaction Section */
+.user-satisfaction {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+.user-satisfaction-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.testimonial {
+    text-align: center;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--secondary-color-dark);
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-image {
+    width: 140px;
+    height: 200px;
+    border-radius: 115px;
+    margin-bottom: 20px;
+}
+
+.testimonial-content {
+    font: var(--txt_medium);
+    width: 80%;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--secondary-color-dark);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.slider-button:hover {
+    background: var(--secondary-color-light);
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}

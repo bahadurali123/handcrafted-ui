@@ -1,0 +1,81 @@
+.shipping-addresses-page {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: var(--secondary-color-dark);
+    margin-bottom: 20px;
+    font: var(--heading_large);
+    font-weight: var(--font-weight-bold);
+}
+
+.shipping-addresses-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.shipping-addresses-table th,
+.shipping-addresses-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.shipping-address-item .status-indicator {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.shipping-address-item .status-indicator.active {
+    background-color: var(--primary-color-light);
+    /* Active color */
+}
+
+.options-icon {
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--secondary-color-dark);
+    position: relative;
+}
+
+.options-menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    list-style: none;
+    padding: 5px 0;
+    margin-top: 5px;
+    right: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.options-menu li {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.options-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .shipping-addresses-table {
+        font-size: 14px;
+    }
+
+    .shipping-address-item .status-indicator {
+        width: 14px;
+        height: 14px;
+    }
+}

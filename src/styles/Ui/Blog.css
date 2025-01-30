@@ -1,0 +1,145 @@
+.blog {
+    margin: 10px 10px 40px;
+    font: var(--txt_medium);
+}
+
+.blog-header {
+    text-align: left;
+    font: var(--heading_large);
+    font-weight: var(--font-weight-bold);
+    margin: 20px 0px 10px;
+}
+
+.blog-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.blog-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.share-icons {
+    width: auto;
+    display: flex;
+}
+.share-icons i {
+    margin: 0 10px;
+    color: var(--secondary-color-dark);
+    cursor: pointer;
+}
+
+.blog-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Comments */
+.comments {
+    margin: 40px 10px;
+}
+
+.comments-count {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.add-comment {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.comment-left-side {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-left-side img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.comment-right-side {
+    width: 100%;
+}
+
+.add-comment input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.comment-btn-section {
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
+
+.comments-list {
+    margin-top: 20px;
+}
+
+.comment-item {
+    margin-top: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-right-side .comment-info,
+.comment-right-side .comment {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.comment-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* font-size: 0.9rem; */
+    font: var(--txt_medium);
+    color: #555;
+}
+
+.comment-item p {
+    margin-top: 5px;
+    /* font-size: 0.9rem; */
+    font: var(--txt_medium);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .blog-header {
+        font-size: 1.5rem;
+    }
+
+    .comment-left-side img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .comments-list {
+        /* padding: 0 10px; */
+        padding: 0 5px;
+    }
+
+    .share-icons svg {
+        margin: 0 5px;
+    }
+
+    .comment-item {
+        font-size: 0.85rem;
+        padding: 10px 5px;
+    }
+}
