@@ -7,23 +7,13 @@ import { useNavigate } from "react-router-dom";
 import { clearCart } from "../../store/slices/cart.slice";
 
 const PaypalButtons = () => {
-     const navigate = useNavigate();
-     const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const cartdata = useSelector((state) => state.cart);
     const createOrder = async () => {
         console.log("Create order!");
         try {
             const { cart, totalPrice } = cartdata;
-            // const cart = [
-            //     {
-            //         // id: "YOUR_PRODUCT_ID",
-            //         // quantity: "YOUR_PRODUCT_QUANTITY",
-            //         cart,
-            //         totalPrice
-            //     },
-            // ];
-
-            // const response = await paymentService.createPaypalOrder(cart);
             const response = await paymentService.createPaypalOrder({ cart, totalPrice });
             console.log("Responser in Create order: ", response);
             return response.data.id;

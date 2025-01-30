@@ -12,14 +12,13 @@ function App() {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log("{{{{{{{{{{{{{.........1", loading);
 
 
   // Check if the current route includes '/admin' or '/error'
   const isUserRoute = location.pathname.startsWith('/account');
   const isAdminRoute = location.pathname.startsWith('/admin');
   const isErrorRoute = location.pathname.startsWith('/error');
-  console.log("Domain name 1: ", isUserRoute, isAdminRoute, isErrorRoute, location.pathname);
+  // console.log("Domain name 1: ", isUserRoute, isAdminRoute, isErrorRoute, location.pathname);
 
   useEffect(() => {
     const awaitData = async () => {
@@ -32,7 +31,6 @@ function App() {
 
 
   // Conditional rendering to handle loading
-  // if (loading) return <p>Loading...</p>;
   if (loading) return (
     <>
       <LoadingIndicator />
