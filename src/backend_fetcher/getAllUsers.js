@@ -4,7 +4,6 @@ import { allUsers, setUserLoading } from "../store/slices/users.slice";
 const GetAllUsers = async (dispatch) => {
     try {
         const response = await userService.getAllUsers();
-        console.log("Users: ", response.data);
         dispatch(setUserLoading(true));
         if (response) {
             const usersData = response.data;

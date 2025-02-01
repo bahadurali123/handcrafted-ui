@@ -4,7 +4,6 @@ import { Link, NavLink } from 'react-router-dom';
 
 const TopHeader = ({ isSidebarOpen, toggleSidebar }) => {
     const userdata = useSelector((state) => state.auth);
-    // console.log("Header Auth Status: ", userdata.status);
     const logedUser = userdata?.data?.userData;
     // console.log("Header Auth User: ", logedUser);
     return (
@@ -13,9 +12,6 @@ const TopHeader = ({ isSidebarOpen, toggleSidebar }) => {
                 <Link to="/" className="logo"><img src="/Handcrafted.png" alt="Logo" /></Link>
             </div>
             <div className="top-icons">
-                {/* <div className='bell-icon'>
-                    <i className="bi bi-bell"></i>
-                </div> */}
                 <div className="profile-pic">
                     {/* Placeholder for profile image */}
                     {userdata.status

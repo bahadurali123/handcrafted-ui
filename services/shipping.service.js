@@ -28,16 +28,6 @@ export class ShippingService {
         }
     }
 
-    //   // Fetch a specific shipping option by ID
-    //   async getShippingById(shippingId) {
-    //     try {
-    //       const response = await axios.get(`${this.apiUrl}/${shippingId}`);
-    //       return response.data;
-    //     } catch (error) {
-    //       this.handleError(error);
-    //     }
-    //   }
-
     // Create a new shipping option
     async createShipping(shippingData) {
         try {
@@ -53,7 +43,6 @@ export class ShippingService {
     //   Update status an existing shipping option
     async updateShippingStatus(shippingId) {
         try {
-            console.log("Edit shipping status service", shippingId)
             const response = await axios.get(`${this.apiUrl}/shipping/edit/status/${shippingId}`,
                 { withCredentials: true, }
             );

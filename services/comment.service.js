@@ -18,21 +18,9 @@ export class CommentService {
     }
   }
 
-  //   // Fetch comments for a specific item by ID (e.g., product, post, review)
-  //   async getCommentsByItemId(itemId) {
-  //     try {
-  //       const response = await axios.get(`${this.apiUrl}/item/${itemId}`);
-  //       return response.data;
-  //     } catch (error) {
-  //       this.handleError(error);
-  //     }
-  //   }
-
   // Add a comment to an item
   async addComment(itemId, commentData) {
-    // async addComment(itemId, userId, commentData) {
     try {
-      // const response = await axios.post(`${this.apiUrl}/${itemId}/addcomment`, { itemId, userId, ...commentData });
       const response = await axios.post(`${this.apiUrl}/${itemId}/addcomment`, commentData, { withCredentials: true, });
       return response.data;
     } catch (error) {
@@ -43,7 +31,6 @@ export class CommentService {
   // Update an existing comment
   async updateComment(commentId, commentData) {
     try {
-      console.log("Update comment service: ", commentId, commentData);
       const response = await axios.patch(`${this.apiUrl}/admin/comment/update/${commentId}`,
         commentData,
         { withCredentials: true, });
@@ -56,7 +43,6 @@ export class CommentService {
   // Delete a comment
   async deleteComment(commentId) {
     try {
-      console.log("Delete comment service: ", commentId);
       const response = await axios.delete(`${this.apiUrl}/admin/comment/delete/${commentId}`,
         { withCredentials: true, });
       return response.data;

@@ -4,7 +4,6 @@ import { loadAllCategories, setCategoryLoading } from "../store/slices/category.
 const GetAllCategories = async (dispatch) => {
     try {
         const response = await categoryService.getAllCategories();
-        console.log("Category: ", response);
         dispatch(setCategoryLoading(true));
         if (response) {
             const categoriessData = response.data;

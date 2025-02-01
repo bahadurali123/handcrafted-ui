@@ -14,12 +14,10 @@ const WishlistPage = () => {
     const productsdata = useSelector((state) => state.product);
     const products = productsdata.products.ProductsData;
     const wishlistProducts = products?.filter(product => productIds.includes(product._id));
-    console.log("Wishlist products: ", wishlistProducts);
 
     const handleRemoveFromWishlist = async (productId) => {
         try {
             const response = await wishlistService.addItemToWishlist(productId);
-            console.log("Wishlist: ", response.data);
             if (response) {
                 const wishlistData = response.data;
                 if (wishlistData) {

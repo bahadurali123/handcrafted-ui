@@ -4,7 +4,6 @@ import { addUserOrder, setOrderLoading } from "../store/slices/order.slice";
 const GetAllOrders = async (dispatch) => {
     try {
         const response = await orderService.getAllOrders();
-        console.log("All Orders: ", response);
         dispatch(setOrderLoading(true));
         if (response) {
             const ordersData = response.data;

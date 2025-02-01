@@ -13,9 +13,7 @@ export class ApiService {
     // GET: Fetch all resources
     async getAllBlogs() {
         try {
-            console.log("Blogs Service: ");
             const response = await axios.get(`${this.baseUrl}s`, { withCredentials: true, });
-            // console.log("IN Service: ", response.data);
             return response.data;
         } catch (error) {
             this.handleError(error);
@@ -34,7 +32,6 @@ export class ApiService {
 
     // POST: Create a new resource
     async createPost(data) {
-        console.log("Blog data in Service: ", data);
         try {
             const response = await axios
                 .post(`${this.Url}/addblog`,
@@ -65,7 +62,6 @@ export class ApiService {
 
     // DELETE: Delete a resource by ID
     async deleteBlog(id) {
-        console.log("Delete blog service: ", id);
         try {
             const response = await axios.delete(`${this.Url}/deleteblog/${id}`, { withCredentials: true });
             return response.data;

@@ -12,29 +12,17 @@ export class UserService {
     // Fetch all users
     async getAllUsers() {
         try {
-            console.log("Get Users Service!");
             const response = await axios.get(`${this.Url}/users`,
                 // { withCredentials: true, }
                 {
                     withCredentials: true, headers: { "Content-Type": "multipart/form-data", },
                 }
             );
-            console.log("Users service: ", response);
             return response.data;
         } catch (error) {
             this.handleError(error);
         }
     }
-
-    //   // Fetch a specific user by ID
-    //   async getUserById(userId) {
-    //     try {
-    //       const response = await axios.get(`${this.apiUrl}/${userId}`);
-    //       return response.data;
-    //     } catch (error) {
-    //       this.handleError(error);
-    //     }
-    //   }
 
     // Update an existing user
     async updateUser(userData) {

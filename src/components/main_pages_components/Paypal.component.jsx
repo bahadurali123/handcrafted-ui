@@ -15,7 +15,6 @@ const PaypalButtons = () => {
         try {
             const { cart, totalPrice } = cartdata;
             const response = await paymentService.createPaypalOrder({ cart, totalPrice });
-            console.log("Responser in Create order: ", response);
             return response.data.id;
         } catch (error) {
             console.log("Featch Posts Error: ", error);
@@ -25,12 +24,11 @@ const PaypalButtons = () => {
         console.log("Capture order!");
         try {
             const response = await paymentService.capturePaypalPayment({ orderId: data.orderID, source: data.paymentSource });
-            console.log("Responser in Capture order: ", response.data);
-            console.log("Responser in Capture order status: ", response);
+            // console.log("Responser in Capture order: ", response.data);
+            // console.log("Responser in Capture order status: ", response);
             const orderStatus = response.status;
             const statusCodes = [200, 201, 202, 204];
             if (statusCodes.includes(orderStatus)) {
-                console.log("PayPal orde Created!");
                 dispatch(clearCart());
                 navigate('/order/success')
             } else {
@@ -38,7 +36,6 @@ const PaypalButtons = () => {
                 navigate('/order/cancel')
             }
 
-            // console.log("Responser in Capture order status: ", response?.status);
         } catch (error) {
             console.log("PayPal orde Creation Error: ", error);
         }

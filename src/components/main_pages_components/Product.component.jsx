@@ -17,7 +17,7 @@ const ProductPage = () => {
     const products = productsdata.products.ProductsData;
     const product = products.filter(item => item._id === productId.productId);
     const relatedproducts = products.filter(item => item.categoryId === product[0].categoryId && item._id !== productId.productId);
-    console.log("Product: ", product, relatedproducts);
+    // console.log("Product: ", product, relatedproducts);
     const userdata = useSelector((state) => state.auth);
     const logedUser = userdata.data?.userData;
     const productWishListStatus = logedUser?.wishlist.includes(product[0]._id);
@@ -38,7 +38,6 @@ const ProductPage = () => {
         try {
             if (logedUser) {
                 const response = await wishlistService.addItemToWishlist(id);
-                console.log("Wishlist: ", response.data);
                 if (response) {
                     const wishlistData = response.data;
                     if (wishlistData) {

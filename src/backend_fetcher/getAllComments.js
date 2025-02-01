@@ -4,7 +4,6 @@ import { loadAllComments, setCommentLoading } from "../store/slices/comment.slic
 const GetAllComments = async (dispatch) => {
     try {
         const response = await commentService.getAllComments();
-        console.log("Comments: ", response);
         dispatch(setCommentLoading(true));
         if (response) {
             const CommentsData = response.data;

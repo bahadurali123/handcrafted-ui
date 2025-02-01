@@ -5,9 +5,7 @@ import errorHandler from '../src/utils/handleError';
 console.log("Product Service!");
 export class ProductService {
     constructor() {
-        // this.apiUrl = `${config.backendBaseUrl}/admin`; // base URL for products API
         this.Url = `${config.backendBaseUrl}/admin`;
-        // this.baseUrl = `${config.backendBaseUrl}/blog`;
     }
 
     // Fetch all products
@@ -20,19 +18,8 @@ export class ProductService {
         }
     }
 
-    // // Fetch a single product by ID
-    // async getProductById(productId) {
-    //     try {
-    //         const response = await axios.get(`${this.apiUrl}/${productId}`);
-    //         return response.data;
-    //     } catch (error) {
-    //         this.handleError(error);
-    //     }
-    // }
-
     // Create a new product
     async createProduct(productData) {
-        console.log("Product data in Service: ", productData);
         try {
             const response = await axios.post(`${this.Url}/addproduct`,
                 productData,
@@ -47,7 +34,6 @@ export class ProductService {
 
     // Update an existing product
     async updateProduct(productId, productData) {
-        console.log("Update Product service: ", productId, productData);
         try {
             const response = await axios.patch(`${this.Url}/updateproduct/${productId}`,
                 productData,

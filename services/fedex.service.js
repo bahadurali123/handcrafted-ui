@@ -2,7 +2,6 @@ import axios from 'axios';
 import config from '../config/configuration';
 import errorHandler from '../src/utils/handleError';
 
-console.log("FedEx Service!");
 export class FedExService {
     constructor() {
         this.Url = `${config.backendBaseUrl}/fedex`;
@@ -11,7 +10,6 @@ export class FedExService {
     // Find shipping rates
     async findRate(rateRequestData) {
         try {
-            // console.log("Find Shipping Rates Service!", rateRequestData)
             const response = await axios.get(`${this.Url}/rates/${rateRequestData}`,
                 { withCredentials: true, }
             );
@@ -24,7 +22,6 @@ export class FedExService {
     // Create a FedEx shipment
     async createShipment(shipmentData) {
         try {
-            console.log("Create Shipping Service!", shipmentData)
             const response = await axios.post(`${this.Url}/createshipment`,
                 shipmentData,
                 { withCredentials: true, }
@@ -38,7 +35,6 @@ export class FedExService {
     // Track a shipment by its tracking number
     async trackShipment(trackingNumber) {
         try {
-            console.log("Tracking number in track service: ", trackingNumber);
             const response = await axios.get(`${this.Url}/track/${trackingNumber}`,
                 { withCredentials: true, }
             );

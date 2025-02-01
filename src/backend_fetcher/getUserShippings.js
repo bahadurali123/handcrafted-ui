@@ -4,7 +4,6 @@ import { loadAllShippings, setShippingLoading } from "../store/slices/shipping.s
 const GetUserShippings = async (dispatch) => {
     try {
         const response = await shippingService.getUserShippings();
-        console.log("Shippings: ", response);
         dispatch(setShippingLoading(true));
         if (response) {
             const ShippingsData = response.data;

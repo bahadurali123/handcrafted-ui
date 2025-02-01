@@ -2,7 +2,6 @@ import authService from "../../services/auth.service";
 import { login, logout } from "../store/slices/auth.slice";
 
 const CheckAuthorized = async (dispatch, navigate, isUserRoute, isAdminRoute) => {
-    console.log("...........Check OAut........... ");
     try {
         const response = await authService.checkauthorized();
         if (response) {

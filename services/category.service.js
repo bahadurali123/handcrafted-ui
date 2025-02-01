@@ -5,7 +5,6 @@ import errorHandler from '../src/utils/handleError';
 console.log("Category Service!");
 export class CategoryService {
     constructor() {
-        // this.apiUrl = `${config.backendBaseUrl}/categories`; // base URL for categories API
         this.apiUrl = `${config.backendBaseUrl}`; // base URL for categories API
     }
 
@@ -32,7 +31,6 @@ export class CategoryService {
     // Update an existing category
     async updateCategory(categoryId, categoryData) {
         try {
-            console.log("Id: ", categoryId, "Data: ", categoryData);
             const response = await axios.put(`${this.apiUrl}/updatecategory/${categoryId}`, categoryData, { withCredentials: true, });
             return response.data;
         } catch (error) {

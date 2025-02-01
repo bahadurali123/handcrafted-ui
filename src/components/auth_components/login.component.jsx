@@ -84,8 +84,8 @@ const Login = () => {
                 />
 
                 <div className="recaptcha-container">
-                    <ReCAPTCHA sitekey="your-recaptcha-site-key" />
-                    {/* <ReCAPTCHA sitekey={config.recaptchaKey} /> */}
+                    {/* <ReCAPTCHA sitekey="your-recaptcha-site-key" /> */}
+                    <ReCAPTCHA sitekey={config.recaptchaKey} />
                 </div>
 
                 <div className="btns-div">

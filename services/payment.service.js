@@ -6,17 +6,13 @@ console.log("Payment Service!");
 export class PaymentService {
     constructor() {
         this.paypalApiUrl = `${config.backendBaseUrl}/paypal`; // Base URL for PayPal-related API
-        // this.paypalApiUrl = `${config}/paypal`; // Base URL for PayPal-related API
         this.stripeApiUrl = `${config}/stripe`; // Base URL for Stripe-related API
     }
 
     // PayPal: Create a new order
     async createPaypalOrder(orderData) {
-        console.log("payment create service");
         try {
-            //   const response = await axios.post(`${this.paypalApiUrl}/orders`, orderData);
             const response = await axios.post(`${this.paypalApiUrl}/order/create`, orderData, { withCredentials: true, });
-            // const response = await axios.post(`${this.paypalApiUrl}/createpaypalorder`, orderData, { withCredentials: true, });
             return response.data;
         } catch (error) {
             this.handleError(error);
@@ -25,10 +21,8 @@ export class PaymentService {
 
     // PayPal: Capture payment for an order
     async capturePaypalPayment(orderId) {
-        console.log("payment capture service");
         try {
             const response = await axios.post(`${this.paypalApiUrl}/order/capture`, orderId, { withCredentials: true, });
-            // return response.data;
             return response;
         } catch (error) {
             this.handleError(error);

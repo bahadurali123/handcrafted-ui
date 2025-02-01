@@ -4,7 +4,6 @@ import { loadAllProducts, setproductsLoading } from "../store/slices/Product.sli
 const GetAllProducts = async (dispatch) => {
     try {
         const response = await productService.getAllProducts();
-        console.log("Products: ", response);
         dispatch(setproductsLoading(true));
         if (response) {
             const ProductsData = response.data;

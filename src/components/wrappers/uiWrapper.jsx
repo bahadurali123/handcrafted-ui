@@ -17,7 +17,6 @@ function UiWrapper({ children }) {
 
     useEffect(() => {
         const awaitData = async () => {
-            console.log("You are UI: ");
             setLoading(true);
             await GetAllProducts(dispatch);
             await GetAllPosts(dispatch);

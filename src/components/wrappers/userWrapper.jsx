@@ -16,7 +16,6 @@ function UserWrapper({ children }) {
     useEffect(() => {
         const awaitData = async () => {
             if (logedUser.status === "Active" && (logedUser.role === "User" || logedUser.role === "Admin")) {
-                console.log("You are User: ");
                 setLoading(true);
                 await GetUserOrders(dispatch);
                 await GetUserShippings(dispatch);
@@ -29,7 +28,6 @@ function UserWrapper({ children }) {
         }
         awaitData();
     }, [navigate, dispatch])
-    // return !loading ? <>{children}</> : <h1>Loading...</h1>;
     return !loading ? <>{children}</> : <LoadingIndicator />;
 }
 

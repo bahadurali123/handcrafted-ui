@@ -6,12 +6,14 @@ import { useDispatch } from "react-redux";
 
 // Backend Data Fetchers
 import CheckAuthorized from "./backend_fetcher/checkAuthorized";
+import config from "../config/configuration";
 
 function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  console.log("Backend URL: ", config.backendBaseUrl);
 
 
   // Check if the current route includes '/admin' or '/error'

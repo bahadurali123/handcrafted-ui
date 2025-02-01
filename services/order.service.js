@@ -2,7 +2,6 @@ import axios from 'axios';
 import config from '../config/configuration';
 import errorHandler from '../src/utils/handleError';
 
-console.log("Order Service!");
 export class OrderService {
     constructor() {
         this.apiUrl = `${config.backendBaseUrl}/orders`; // Base URL for order management API

@@ -18,46 +18,15 @@ export class ReviewService {
         }
     }
 
-    //   // Fetch a specific review by ID
-    //   async getReviewById(reviewId) {
-    //     try {
-    //       const response = await axios.get(`${this.apiUrl}/${reviewId}`);
-    //       return response.data;
-    //     } catch (error) {
-    //       this.handleError(error);
-    //     }
-    //   }
-
     // Create a new review
     async createReview(orderId, reviewData) {
         try {
-            console.log("Add Review Service: ", reviewData, orderId);
             const response = await axios.post(`${this.apiUrl}/review/add/${orderId}`, reviewData, { withCredentials: true, });
             return response.data;
         } catch (error) {
             this.handleError(error);
         }
     }
-
-    //   // Update an existing review
-    //   async updateReview(reviewId, reviewData) {
-    //     try {
-    //       const response = await axios.put(`${this.apiUrl}/${reviewId}`, reviewData);
-    //       return response.data;
-    //     } catch (error) {
-    //       this.handleError(error);
-    //     }
-    //   }
-
-    //   // Delete a review
-    //   async deleteReview(reviewId) {
-    //     try {
-    //       const response = await axios.delete(`${this.apiUrl}/${reviewId}`);
-    //       return response.data;
-    //     } catch (error) {
-    //       this.handleError(error);
-    //     }
-    //   }
 
     // Handle error responses
     handleError(error) {
