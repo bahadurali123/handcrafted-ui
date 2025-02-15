@@ -8,7 +8,7 @@
 
 /* Hero Section */
 .hero-section {
-    height: 400px;
+    height: 550px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -127,4 +127,10 @@
 
 .right {
     right: 10px;
+}
+
+@media (max-width: 950px) {
+    .hero-section {
+        height: 400px;
+    }
 }
