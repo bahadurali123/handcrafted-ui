@@ -10,7 +10,7 @@ const AddBlog = () => {
 
 
     const handleAddBlog = async (data) => {
-        console.log("Blog Added:", data);
+        // console.log("Blog Added:", data);
         const formData = new FormData();
         formData.append("title", data.title); // Append text field
         formData.append("slug", data.slug); // Append text field
@@ -21,7 +21,7 @@ const AddBlog = () => {
         formData.append("publishedAt", data.publishedAt); // Append text field
         formData.append("status", data.status); // Append text field
 
-        console.log("FormData", formData);
+        // console.log("FormData", formData);
 
         const response = await BlogService.createPost(formData);
         if (response) {

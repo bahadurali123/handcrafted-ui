@@ -33,10 +33,10 @@ const FilterPopup = ({ onClose }) => {
         return result;
     };
     const filteredCategories = filterHierarchy(categories, "6728d5ec46ad752365cab7c9");
-    console.log("hierarchy 1", filteredCategories);
+    // console.log("hierarchy 1", filteredCategories);
 
     const onSubmit = async (data) => {
-        console.log("Hook Form Data is: ", data);
+        // console.log("Hook Form Data is: ", data);
         try {
             // console.log("Products LIst: ", products);
             const filteredProductsList = products.filter(item => {
@@ -46,7 +46,7 @@ const FilterPopup = ({ onClose }) => {
                     item.stockQuantity === parseInt(data?.productstock)
                 // isSameDay(new Date(item.publishedAt), new Date(data?.published));
             });
-            console.log("Filtered Products LIst: ", filteredProductsList);
+            // console.log("Filtered Products LIst: ", filteredProductsList);
 
             if (filteredProductsList) {
                 const productData = filteredProductsList;

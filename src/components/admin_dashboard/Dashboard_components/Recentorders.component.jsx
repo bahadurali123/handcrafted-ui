@@ -9,7 +9,7 @@ const RecentOrders = () => {
     // console.log("Orders List in history: ", ordersList);
 
     const orders = ordersList.slice(0, 5);
-    console.log("Admin Orders: ", orders,);
+    // console.log("Admin Orders: ", orders,);
 
     return (
         <div className="recent-orders-container">

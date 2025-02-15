@@ -11,17 +11,17 @@ const UpdateProduct = () => {
     const navigate = useNavigate();
     const productsdata = useSelector((state) => state.product);
     const products = productsdata.products.ProductsData;
-    console.log("Blog posts: ", products, productId);
+    // console.log("Blog posts: ", products, productId);
     const product = products.filter(item => item._id === productId.productId);
-    console.log("Blog Post for edit is: ", product);
+    // console.log("Blog Post for edit is: ", product);
 
 
     const handleUpdateProduct = async (data) => {
-        console.log("Product Updated:", data);
+        // console.log("Product Updated:", data);
 
 
         const formData = new FormData();
-        console.log("Product images: ", [...data.images]);
+        // console.log("Product images: ", [...data.images]);
         // const colors = data.colors.split(', ');
         // console.log("Collers: ", colors);
 
@@ -44,12 +44,12 @@ const UpdateProduct = () => {
             formData.append("images", data.images[i]);
         }
 
-        console.log("FormData", formData);
+        // console.log("FormData", formData);
 
         try {
             const response = await productService.updateProduct(product[0]._id, formData);
-            console.log("In Update Product: ", response);
-            console.log("In Update Product data: ", response.data);
+            // console.log("In Update Product: ", response);
+            // console.log("In Update Product data: ", response.data);
             if (response) {
                 const productData = response.data;
                 if (productData) {

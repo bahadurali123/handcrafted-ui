@@ -4,8 +4,6 @@ const initialState = {
     status: "handcrafted",
     orders: [],
     loading: false,
-    // currentOrder: null,
-    // error: null,
     entity: null,
 };
 
@@ -16,17 +14,7 @@ const orderSlice = createSlice({
         setOrderLoading: (state, action) => {
             state.loading = action.payload;
         },
-        // setError: (state, action) => {
-        //     state.error = action.payload;
-        // },
-        // loadOrders: (state, action) => {
-        //     state.orders = action.payload;
-        //     state.loading = false;
-        //     state.error = null;
-        // },
         addUserOrder: (state, action) => {
-            // state.orders.push(action.payload);
-            // const { name, ordersData } = action.payload;
             state.orders = action.payload;
             state.entity = 'user';
             state.status = "succeeded";
@@ -40,12 +28,6 @@ const orderSlice = createSlice({
         // },
         // removeOrder: (state, action) => {
         //     state.orders = state.orders.filter((order) => order.id !== action.payload);
-        // },
-        // setCurrentOrder: (state, action) => {
-        //     state.currentOrder = action.payload;
-        // },
-        // clearCurrentOrder: (state) => {
-        //     state.currentOrder = null;
         // },
     },
 });

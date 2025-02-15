@@ -7,10 +7,10 @@ const Resetpass = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
-        console.log("Hook Form Data is: ", data);
+        // console.log("Hook Form Data is: ", data);
         try {
             const response = await authService.resetpassword(data);
-            console.log("In Reset Password: ", response);
+            // console.log("In Reset Password: ", response);
         } catch (error) {
             console.log(error);
         }

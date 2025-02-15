@@ -15,7 +15,7 @@ const ProductsPage = () => {
 
     const imageSrc = "/Handcrafted.png";
 
-    console.log("Filtered Categories: ", filterState);
+    // console.log("Filtered Categories: ", filterState);
 
     // Check filter status true or false
     const dataIs = filterState.entity === "userProducts" && filterState.status === true ? filterProducts : products;

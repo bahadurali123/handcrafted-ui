@@ -9,7 +9,7 @@ const ProductForm = ({ isEdit = false, initialValues = {}, onSubmit }) => {
     const categoriesdata = useSelector((state) => state.category);
     const categories = categoriesdata.categories.categoriessData;
     const totalImages = initialValues[0]?.images.length || 0;
-    console.log("Images length: ", totalImages);
+    // console.log("Images length: ", totalImages);
 
     const {
         register,
@@ -52,7 +52,7 @@ const ProductForm = ({ isEdit = false, initialValues = {}, onSubmit }) => {
     };
     // const filteredCategories = filterHierarchy(categories, "6728d5ec46ad752365cab7c9");
     const filteredCategories = filterHierarchy(categories, config.productCategoryId);
-    console.log("hierarchy 1", filteredCategories);
+    // console.log("hierarchy 1", filteredCategories);
 
     return (
         <div className="add-product-container">

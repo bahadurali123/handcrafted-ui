@@ -11,7 +11,7 @@ const Logout = () => {
     const onSubmit = async () => {
         try {
             const response = await authService.signout();
-            console.log("SignOut Response: ", response);
+            // console.log("SignOut Response: ", response);
             if (response) {
                 if (response) {
                     dispatch(logout());

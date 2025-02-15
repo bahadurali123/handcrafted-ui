@@ -12,10 +12,10 @@ const Signup = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
-        console.log("Hook Form Data is: ", data);
+        // console.log("Hook Form Data is: ", data);
         try {
             const response = await authService.signup(data);
-            console.log("In Signup: ", response);
+            // console.log("In Signup: ", response);
             if (response) {
                 const userData = response.data;
                 if (userData) {
@@ -32,9 +32,8 @@ const Signup = () => {
 
     const googlelogin = async () => {
         try {
-            console.log("In google");
             const response = await authService.googleSignin();
-            console.log("In google login: ", response);
+            // console.log("In google login: ", response);
             if (response) {
                 // dispatch(authLogin(response.data));
                 window.location.href = response.redirect;
@@ -47,7 +46,11 @@ const Signup = () => {
 
     const facebooklogin = async () => {
         try {
-            console.log("In facebook");
+            const response = await authService.facebookSignin();
+            if (response) {
+                window.location.href = response.redirect;
+
+            }
         } catch (error) {
             console.log(error);
         }

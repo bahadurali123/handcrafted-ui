@@ -18,7 +18,7 @@ const Categories = () => {
     const filterState = useSelector((state) => state.filters);
     const filterCategories = filterState.filteredData;
 
-    console.log("Filtered Categories: ", filterState);
+    // console.log("Filtered Categories: ", filterState);
 
 
     // Check filter status true or false

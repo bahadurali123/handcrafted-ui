@@ -12,7 +12,7 @@ const Products = () => {
     const filterState = useSelector((state) => state.filters);
     const filterProducts = filterState.filteredData;
 
-    console.log("Filtered Categories: ", filterState);
+    // console.log("Filtered Categories: ", filterState);
 
     // Check filter status true or false
     const dataIs = filterState.entity === "Products" && filterState.status === true ? filterProducts : products;

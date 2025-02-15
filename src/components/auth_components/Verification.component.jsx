@@ -10,10 +10,10 @@ const Verification = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
-        console.log("Hook Form Data is: ", data);
+        // console.log("Hook Form Data is: ", data);
         try {
             const response = await authService.verification(data);
-            console.log("In Verification: ", response);
+            // console.log("In Verification: ", response);
             if (response.data) {
                 navigate("/account/dashboard");
             }
@@ -25,7 +25,7 @@ const Verification = () => {
     const regenerate = async () => {
         try {
             const response = await authService.regeneratecode();
-            console.log("In Re-generate Code: ", response);
+            // console.log("In Re-generate Code: ", response);
         } catch (error) {
             console.log(error);
         }

@@ -16,11 +16,11 @@ const WriteReview = () => {
 
     const reviewStatus = reviewsList.find(item => item.orderId === orderId.orderId);
 
-    console.log("Order Id: ", orderId, reviewStatus);
+    // console.log("Order Id: ", orderId, reviewStatus);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = async (data) => {
-        console.log("Blog Added:", data);
+        // console.log("Blog Added:", data);
         const formData = new FormData();
         formData.append("name", data.name);
         formData.append("email", data.email);
@@ -28,10 +28,10 @@ const WriteReview = () => {
         formData.append("image", data.image[0]);
         formData.append("reviewDescription", data.reviewDescription);
 
-        console.log("FormData", formData);
+        // console.log("FormData", formData);
         try {
             const response = await reviewService.createReview(orderId.orderId, formData);
-            console.log("Add Review Response: ", response);
+            // console.log("Add Review Response: ", response);
             if (response) {
                 const reviewData = response.data;
                 if (reviewData) {

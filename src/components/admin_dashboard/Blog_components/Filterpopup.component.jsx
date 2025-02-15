@@ -37,19 +37,19 @@ const BlogsFilterPopup = ({ onClose }) => {
     };
     const filteredCategories = filterHierarchy(categories, "6728d7790093687377464455");
     // const data = filterHierarchy(categories, "6728d5ec46ad752365cab7c9");
-    console.log("Filtered Cat data: ", filteredCategories);
+    // console.log("Filtered Cat data: ", filteredCategories);
 
     const onSubmit = async (data) => {
-        console.log("Hook Form Data is: ", data);
+        // console.log("Hook Form Data is: ", data);
         try {
-            console.log("Posts LIst: ", posts);
+            // console.log("Posts LIst: ", posts);
             const filteredPostsList = posts.filter(item => {
                 return item.title === data?.title ||
                     item.categoryId === data?.parentId ||
                     item.status === data?.status ||
                     isSameDay(new Date(item.publishedAt), new Date(data?.published));
             });
-            console.log("Filtered Posts LIst: ", filteredPostsList);
+            // console.log("Filtered Posts LIst: ", filteredPostsList);
 
             if (filteredPostsList) {
                 const postData = filteredPostsList;

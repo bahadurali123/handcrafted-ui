@@ -14,9 +14,6 @@ const categorySlice = createSlice({
         setCategoryLoading: (state, action) => {
             state.loading = action.payload;
         },
-        // setError: (state, action) => {
-        //     state.error = action.payload;
-        // },
         loadAllCategories: (state, action) => {
             state.categories = action.payload;
             state.loading = false;
@@ -24,14 +21,10 @@ const categorySlice = createSlice({
             // state.error = null;
         },
         addNewCategory: (state, action) => {
-            // console.log("Payload: ", action.payload);
             state.categories.categoriessData.push(action.payload.categoryData);
         },
         updateCategory: (state, action) => {
-            // console.log("In Category slice: ", action.payload);
             const { _id } = action.payload.categoryData;
-            // const { _id, name, parentId, createdAt, updatedAt } = action.payload.categoryData;
-            // state.categories.categoriessData = state.categories.categoriessData.map(item => item._id == _id ? { _id, name, parentId, createdAt, updatedAt } : item);
             state.categories.categoriessData = state.categories.categoriessData.map(item => item._id == _id ? { ...action.payload.categoryData } : item);
         },
         deleteCategory: (state, action) => {
@@ -46,7 +39,6 @@ const categorySlice = createSlice({
     }
 });
 
-// export const { setLoading, setError, loadCategories, addCategory, updateCategory, deleteCategory } = categorySlice.actions;
 export const { setCategoryLoading, setError, loadAllCategories, addNewCategory, updateCategory, deleteCategory, filterCategories } = categorySlice.actions;
 
 export default categorySlice.reducer;

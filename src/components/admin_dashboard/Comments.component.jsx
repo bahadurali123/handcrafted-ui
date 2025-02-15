@@ -7,11 +7,11 @@ import { useSelector } from 'react-redux';
 const Comments = () => {
     const imageSrc = "/Handcrafted.png";
     const blogId = useParams().blogId;
-    console.log("Comment Artical ID: ", blogId);
+    // console.log("Comment Artical ID: ", blogId);
     const commentsdata = useSelector((state) => state.comment);
     const commentsList = commentsdata.comments.CommentsData;
     const comments = commentsList.filter(item => item.blogId === blogId);
-    console.log("Comment length: ", comments.length);
+    // console.log("Comment length: ", comments.length);
 
     const [showFilter, setShowFilter] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);

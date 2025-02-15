@@ -13,7 +13,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log("Backend URL: ", config.backendBaseUrl);
 
 
   // Check if the current route includes '/admin' or '/error'

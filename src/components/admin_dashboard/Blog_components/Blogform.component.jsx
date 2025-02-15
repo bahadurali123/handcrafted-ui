@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import RTE from '../../Other_components/RTE.component';
 
 const BlogForm = ({ isEdit = false, initialValues = {}, onSubmit }) => {
-    console.log("Blog initial values: ", initialValues);
+    // console.log("Blog initial values: ", initialValues);
 
     const categoriesdata = useSelector((state) => state.category);
     const categories = categoriesdata.categories.categoriessData;
@@ -30,7 +30,7 @@ const BlogForm = ({ isEdit = false, initialValues = {}, onSubmit }) => {
         return result;
     }
     const filteredCategories = filterHierarchy(categories, "Blog");
-    console.log("hierarchy 1", filteredCategories);
+    // console.log("hierarchy 1", filteredCategories);
 
     const { register, handleSubmit, setValue, getValues, watch, control, formState: { errors } } = useForm({
         defaultValues: {

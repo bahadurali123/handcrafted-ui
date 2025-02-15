@@ -6,7 +6,7 @@ const UserProfile = () => {
     const navigate = useNavigate();
     const userdata = useSelector((state) => state.auth);
     const logedUser = userdata.data.userData;
-    console.log("Loged User in profile", logedUser);
+    // console.log("Loged User in profile", logedUser);
 
     const editProfile = () => {
         console.log("Edit profile click");

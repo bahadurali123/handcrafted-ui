@@ -1,6 +1,5 @@
 .dashboard-container {
     padding: 20px;
-    /* font-family: Arial, sans-serif; */
     font: var(--txt_medium);
 }
 
@@ -17,7 +16,6 @@
     max-width: 250px;
     width: auto;
     background-color: #f7f7f7;
-    /* background-color: #e08c8c; */
     border-radius: 8px;
     padding: 20px;
     text-align: center;
@@ -50,19 +48,15 @@
 .low-stock-items span {
     display: inline-block;
     margin-right: 10px;
-    /* font-weight: bold; */
 }
 
 
 @media (max-width: 768px) {
     .stats-container {
-        /* flex-direction: column;
-        align-items: center; */
         flex-wrap: wrap;
     }
 
     .stat-box {
-        /* width: 100%; */
         margin-bottom: 10px;
     }
 

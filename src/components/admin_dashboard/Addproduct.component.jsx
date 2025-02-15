@@ -9,12 +9,12 @@ const AddProduct = () => {
     const navigate = useNavigate();
 
     const handleAddProduct = async (data) => {
-        console.log("Product Added:", data);
+        // console.log("Product Added:", data);
         const formData = new FormData();
         const colors = data.colors.split(', ');
         // console.log("Collers: ", colors);
         const featured = data.featured === true ? true : false;
-        console.log("featured: ", featured);
+        // console.log("featured: ", featured);
 
         formData.append("name", data.name);
         formData.append("description", data.description);
@@ -32,7 +32,7 @@ const AddProduct = () => {
             formData.append("images", data.images[i]);
         }
 
-        console.log("FormData", formData);
+        // console.log("FormData", formData);
         try {
             // Here, you can send the data to the backend to add the product
             const response = await productService.createProduct(formData);

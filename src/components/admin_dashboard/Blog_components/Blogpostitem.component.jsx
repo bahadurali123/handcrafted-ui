@@ -19,7 +19,7 @@ const BlogPostItem = ({ post }) => {
 
     const category = categories.filter(cat => cat._id === post.categoryId).map(cat => cat.name);
 
-    console.log("Category Name:", category);
+    // console.log("Category Name:", category);
 
     //...........................
     const isoDate = post.publishedAt;

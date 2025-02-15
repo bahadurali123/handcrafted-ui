@@ -17,14 +17,14 @@ const CategoryFilterPopup = ({ onClose }) => {
     const uniqueParentIds = new Set(categories.filter(cat => cat.parentId).map(cat => cat.parentId));
     const parentCategories = categories.filter(cat => uniqueParentIds.has(cat._id));
     // console.log("Filtered Categories: ", filteredCategories);
-    console.log("Filtered Categories: ", parentCategories);
+    // console.log("Filtered Categories: ", parentCategories);
 
     const onSubmit = async (data) => {
-        console.log("Category filter Form Data is: ", data);
+        // console.log("Category filter Form Data is: ", data);
         try {
-            console.log("Categories LIst: ", categories);
+            // console.log("Categories LIst: ", categories);
             const filteredCategoriesList = categories.filter(cat => cat._id === data.category || cat.parentId === data.parentId);
-            console.log("Filtered Categories LIst: ", filteredCategoriesList);
+            // console.log("Filtered Categories LIst: ", filteredCategoriesList);
 
             if (filteredCategoriesList) {
                 const categoryData = filteredCategoriesList;

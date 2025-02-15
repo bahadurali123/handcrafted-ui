@@ -22,7 +22,7 @@ const CategoryForm = ({ isEdit = false, initialValues = {}, onSubmit }) => {
     });
     // defaultValues: initialValues, // Pre-populate fields if initialValues are passed
 
-    console.log("Category Form Data: ", isEdit, initialValues);
+    // console.log("Category Form Data: ", isEdit, initialValues);
     // const categories = ['Home Decor', 'Electronics', 'Furniture', 'Clothing']; // Example categories
 
     React.useEffect(() => {

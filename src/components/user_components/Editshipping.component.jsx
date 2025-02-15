@@ -9,7 +9,7 @@ import { updateShipping } from '../../store/slices/shipping.slice';
 const EditShipping = () => {
     const Id = useParams();
     const shippId = Id.Id;
-    console.log("Editable shipping id: ", shippId);
+    // console.log("Editable shipping id: ", shippId);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const shippingsdata = useSelector((state) => state.shipping);
@@ -28,10 +28,10 @@ const EditShipping = () => {
     });
 
     const onSubmit = async (data) => {
-        console.log("Edit Shipping Address Form Data is: ", data);
+        // console.log("Edit Shipping Address Form Data is: ", data);
         try {
             const response = await shippingService.updateShipping(shippId, data);
-            console.log("Edit Shipping Response: ", response);
+            // console.log("Edit Shipping Response: ", response);
             if (response) {
                 const shippingData = response.data;
                 if (shippingData) {

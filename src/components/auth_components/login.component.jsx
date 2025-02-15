@@ -13,12 +13,13 @@ const Login = () => {
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const [userverify, SetUserVerify] = useState(false);
 
     const onSubmit = async (data) => {
-        console.log("Hook Form Data is: ", data);
+        // console.log("Hook Form Data is: ", data);
         try {
             const response = await authService.signin(data);
-            console.log("In login: ", response);
+            // console.log("In login: ", response);
             if (response) {
                 const userData = response.data;
                 if (userData) {
@@ -38,9 +39,8 @@ const Login = () => {
 
     const googlelogin = async () => {
         try {
-            console.log("In google");
             const response = await authService.googleSignin();
-            console.log("In google login: ", response);
+            // console.log("In google login: ", response);
             if (response) {
                 // dispatch(authLogin(response.data));
                 window.location.href = response.redirect;
@@ -53,9 +53,8 @@ const Login = () => {
 
     const facebooklogin = async () => {
         try {
-            console.log("In facebook");
             const response = await authService.facebookSignin();
-            console.log("In facebook login: ", response);
+            // console.log("In facebook login: ", response);
             if (response) {
                 // dispatch(authLogin(response.data));
                 window.location.href = response.redirect;
@@ -64,6 +63,11 @@ const Login = () => {
         } catch (error) {
             console.log(error);
         }
+    }
+
+    function onChange(value) {
+        SetUserVerify(!userverify);
+        console.log("Captcha value:", value);
     }
 
     return (
@@ -85,7 +89,7 @@ const Login = () => {
 
                 <div className="recaptcha-container">
                     {/* <ReCAPTCHA sitekey="your-recaptcha-site-key" /> */}
-                    <ReCAPTCHA sitekey={config.recaptchaKey} />
+                    <ReCAPTCHA sitekey={config.recaptchaKey} onChange={onChange} />
                 </div>
 
                 <div className="btns-div">
@@ -98,6 +102,7 @@ const Login = () => {
                         customStyles={{
                             width: "40%"
                         }}
+                        disabled={!userverify}
                     >
                         Sign In
                     </Button>
@@ -111,6 +116,7 @@ const Login = () => {
                         customStyles={{
                             width: "90%"
                         }}
+                        disabled={!userverify}
                     >
                         Sign In with Google
                     </Button>
@@ -119,6 +125,7 @@ const Login = () => {
                         customStyles={{
                             width: "90%"
                         }}
+                        disabled={!userverify}
                     >
                         Sign In with Facebook
                     </Button>

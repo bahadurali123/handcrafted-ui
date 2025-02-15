@@ -11,23 +11,22 @@ const UpdateCategory = ({ CategoryId }) => {
     const navigate = useNavigate();
     const categoriesdata = useSelector((state) => state.category);
     const categories = categoriesdata.categories.categoriessData;
-    console.log("Update Categories: ", categories, categoryId);
+    // console.log("Update Categories: ", categories, categoryId);
     const category = categories.filter((item) => item._id === categoryId.categoryId);
 
 
     const handleUpdateCategory = async (data) => {
-        console.log("Category data for Updated:", data);
+        // console.log("Category data for Updated:", data);
         const formData = new FormData();
         formData.append("name", data.name); // Append text field
         formData.append("parentId", data.parentId); // Append text field
         formData.append("image", data.image[0]); // Append file input (first file)
 
-        console.log("FormData", formData);
         // Send updated category data to the backend
         // updateCategory
         try {
             const response = await categoryService.updateCategory(category[0]._id, formData);
-            console.log("In Update Category: ", response);
+            // console.log("In Update Category: ", response);
             if (response) {
                 const categoryData = response.data;
                 if (categoryData) {

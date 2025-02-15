@@ -4,7 +4,6 @@
     margin: 0 auto;
     padding: 20px;
     text-align: left;
-    /* font-family: "Arial", sans-serif; */
     font: var(--font-body);
     color: var(--secondary-color-dark);
 }
@@ -47,8 +46,6 @@
 }
 
 .order-message {
-    /* font-size: 0.9rem; */
-    /* color: #555; */
     margin-bottom: 20px;
 
     color: var(--secondary-color-light);
@@ -59,11 +56,8 @@
 .order-tracking-timeline {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* position: relative; */
     margin: 20px 0;
     padding-left: 30px;
-    /* border-left: 2px solid #ddd; */
 
     width: 60%;
     position: relative;
@@ -81,9 +75,6 @@
 }
 
 .timeline-step .circle {
-    /* width: 20px;
-    height: 20px; */
-    /* background-color: #333; */
     border-radius: 50%;
     position: absolute;
     left: -12px;
@@ -96,13 +87,9 @@
 
 .timeline-step .line {
     width: 2px;
-    /* height: 60px; */
-    /* background-color: #ddd; */
     position: absolute;
-    /* left: -3px; */
     top: 20px;
 
-    /* height: 110px; */
     height: 130px;
     left: 6px;
     background-color: var(--secondary-color-dark);
@@ -116,8 +103,6 @@
     font-size: 0.9rem;
     color: #333;
     margin-top: 5px;
-    /* padding-left: 20px; */
-
     padding-left: 40px;
 }
 
@@ -151,9 +136,6 @@
     }
 
     .timeline-step .circle {
-        /* width: 16px;
-        height: 16px; */
-
         height: 30px;
         width: 30px;
     }

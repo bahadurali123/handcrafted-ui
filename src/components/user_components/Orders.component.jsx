@@ -7,7 +7,7 @@ const Orders = () => {
     const imageSrc = "/Handcrafted.png";
     const orderdata = useSelector((state) => state.orders);
     const orders = orderdata.orders.ordersData.orders;
-    console.log("User Orders: ", orders);
+    // console.log("User Orders: ", orders);
 
     const [currentPage, setCurrentPage] = useState(1);
     const ordersPerPage = 5;

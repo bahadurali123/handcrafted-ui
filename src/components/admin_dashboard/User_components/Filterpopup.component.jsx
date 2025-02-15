@@ -15,7 +15,7 @@ const UserFilterPopup = ({ onClose }) => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
-        console.log("Hook Form Data is: ", data);
+        // console.log("Hook Form Data is: ", data);
         try {
             const filteredUsersList = users.filter(item => {
                 return item.name === data?.username ||
@@ -23,7 +23,7 @@ const UserFilterPopup = ({ onClose }) => {
                     item.status === data?.userstatus ||
                     isSameDay(new Date(item.createdAt), new Date(data?.userregistration))
             });
-            console.log("Filtered Users List: ", filteredUsersList);
+            // console.log("Filtered Users List: ", filteredUsersList);
 
             if (filteredUsersList) {
                 const userData = filteredUsersList;

@@ -20,7 +20,7 @@ const EditUser = () => {
     });
 
     const onSubmit = async (data) => {
-        console.log("Profile edit Form Data is: ", data);
+        // console.log("Profile edit Form Data is: ", data);
         const formData = new FormData();
         formData.append("name", data.name);
         formData.append("email", data.email);
@@ -30,7 +30,7 @@ const EditUser = () => {
         // console.log("FormData", formData);
         try {
             const response = await userService.updateUser(formData);
-            console.log("Users: ", response.data);
+            // console.log("Users: ", response.data);
             if (response) {
                 const userData = response.data;
                 if (userData) {

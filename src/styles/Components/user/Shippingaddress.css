@@ -4,10 +4,6 @@
     margin-top: 20px;
 }
 
-.shipping-address h3 {
-    /* font: var(--heading_medium); */
-}
-
 .shipping-address p {
     font: var(--txt_medium);
     color: #4A4E69;
@@ -17,16 +13,3 @@
     display: flex;
     justify-content: space-between;
 }
-
-/* .show-all-btn {
-    background-color: var(--secondary-color-dark);
-    color: var(--primary-color-light);
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.show-all-btn:hover {
-    background-color: var(--primary-color-dark);
-} */

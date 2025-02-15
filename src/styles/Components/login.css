@@ -24,12 +24,9 @@
 
 .signin-heading {
     font-family: "Noto Sans Bengali", sans-serif;
-    /* color: #22223B; */
     color: var(--secondary-color-dark);
-    /* font-size: 28px; */
     font: var(--heading_large);
     text-align: center;
-    /* font-weight: bold; */
     font-weight: var(--font-weight-bold);
 }
 
@@ -45,7 +42,6 @@
 }
 
 .forgot-password {
-    /* color: #22223B; */
     color: var(--secondary-color-dark);
     font-weight: 600;
     text-decoration: underline;
@@ -55,18 +51,13 @@
 }
 
 .link {
-    /* font-family: "Noto Sans", sans-serif; */
-    /* color: #22223B; */
     color: var(--secondary-color-dark);
-    /* font-weight: 800; */
     font: var(--font-cta);
     font-weight: var(--font-weight-bold);
 }
 
 .signup-link {
-    /* color: #22223B; */
     color: var(--secondary-color-dark);
-    /* font-family: "Noto Sans", sans-serif; */
     font: var(--font-cta);
     font-weight: var(--font-weight-bold);
     text-align: center;
@@ -90,12 +81,14 @@
     flex-direction: column;
     align-items: center;
 }
+
 .verify-heading {
     color: var(--secondary-color-dark);
     font: var(--text_medium);
     text-align: center;
     font-weight: var(--font-weight-bold);
 }
+
 .verify-icon {
     width: 150px;
     height: 150px;

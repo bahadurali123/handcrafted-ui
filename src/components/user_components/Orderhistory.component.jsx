@@ -11,10 +11,9 @@ const OrderHistory = () => {
     // console.log("Orders List in history: ", ordersList);
 
     const orders = ordersList?.slice(0, 5);
-    console.log("Orders in history: ", orders,);
+    // console.log("Orders in history: ", orders,);
 
     const showOrders = () => {
-        console.log("Show orders click");
         navigate('/account/orders');
     }
 

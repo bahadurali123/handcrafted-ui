@@ -33,20 +33,3 @@ table th {
 table tr:hover {
     background-color: #F0F0F0;
 }
-
-/* table tbody tr:hover {
-    background-color: #ddd;
-} */
-
-/* .show-all-btn {
-    background-color: var(--secondary-color-dark);
-    color: var(--primary-color-light);
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.show-all-btn:hover {
-    background-color: var(--primary-color-dark);
-} */

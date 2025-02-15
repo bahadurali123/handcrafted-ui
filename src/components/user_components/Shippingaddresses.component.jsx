@@ -17,14 +17,14 @@ const ShippingAddressesPage = () => {
     const shippingsdata = useSelector((state) => state.shipping);
     const shippings = shippingsdata.shippings.ShippingsData;
     const shippingAddresses = shippings.filter(shipping => shipAddressIds.includes(shipping._id));
-    console.log("Shipping Addresses", shippings, shippingAddresses);
+    // console.log("Shipping Addresses", shippings, shippingAddresses);
 
     // Handle status change
     const handleStatusChange = async (id) => {
-        console.log('Change address status:', id);
+        // console.log('Change address status:', id);
         try {
             const response = await shippingService.updateShippingStatus(id);
-            console.log("updata shipping status Response: ", response);
+            // console.log("updata shipping status Response: ", response);
             if (response) {
                 const ShippingsData = response.data;
                 if (ShippingsData) {
@@ -37,16 +37,14 @@ const ShippingAddressesPage = () => {
     };
 
     const handleEdit = (id) => {
-        console.log('Edit address:', id);
         navigate(`/account/shipping/edit/${id}`)
 
     };
 
     const handleDelete = async (id) => {
-        console.log('Delete address:', id);
         try {
             const response = await shippingService.deleteShipping(id);
-            console.log("delete shipping Response: ", response);
+            // console.log("delete shipping Response: ", response);
             if (response) {
                 const shippingData = response.data.shipping;
                 const userData = response.data.user;

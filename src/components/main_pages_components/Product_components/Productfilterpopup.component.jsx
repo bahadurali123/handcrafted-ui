@@ -33,14 +33,14 @@ const ProductFilterPopup = ({ onClose }) => {
         return result;
     };
     const filteredCategories = filterHierarchy(categories, "6728d5ec46ad752365cab7c9");
-    console.log("hierarchy 1", filteredCategories);
+    // console.log("hierarchy 1", filteredCategories);
 
     const onSubmit = async (data) => {
-        console.log("Hook Form Data is: ", data);
+        // console.log("Hook Form Data is: ", data);
         try {
             // console.log("Products LIst: ", products);
             const findcolor = (array, item) => {
-                console.log("find items: ", array, item);
+                // console.log("find items: ", array, item);
                 return array.find(color => color === item);
             };
             const filteredProductsList = products.filter(item => {
@@ -50,7 +50,7 @@ const ProductFilterPopup = ({ onClose }) => {
                     item.price <= parseInt(data?.maxPrice) ||
                     findcolor(item.colors, data?.color)
             });
-            console.log("Filtered Products LIst: ", filteredProductsList);
+            // console.log("Filtered Products LIst: ", filteredProductsList);
 
             if (filteredProductsList.length >= 1) {
                 const productData = filteredProductsList;

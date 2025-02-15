@@ -34,7 +34,7 @@ const ProductPage = () => {
     const decrementQuantity = () => quantity > 1 && setQuantity(quantity - 1);
 
     const handleWishChange = async (id) => {
-        console.log("Wishlist Input: ", id);
+        // console.log("Wishlist Input: ", id);
         try {
             if (logedUser) {
                 const response = await wishlistService.addItemToWishlist(id);
@@ -59,7 +59,7 @@ const ProductPage = () => {
             shippingFee: shippingfee,
             product: product[0]
         }
-        console.log("Cart data is: ", data)
+        // console.log("Cart data is: ", data)
         if (data) {
             if (logedUser) {
                 dispatch(addCartProduct(data))
@@ -79,7 +79,7 @@ const ProductPage = () => {
             shippingFee: shippingfee,
             product: product[0]
         }
-        console.log("Cart data is: ", data)
+        // console.log("Cart data is: ", data)
         if (data) {
             if (logedUser) {
                 await dispatch(clearCart());

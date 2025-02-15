@@ -12,7 +12,7 @@ const BlogPosts = () => {
     const filterState = useSelector((state) => state.filters);
     const filterPosts = filterState.filteredData;
 
-    console.log("Filtered Categories: ", filterState);
+    // console.log("Filtered Categories: ", filterState);
 
     // Check filter status true or false
     const dataIs = filterState.entity === "posts" && filterState.status === true ? filterPosts : posts;

@@ -13,14 +13,12 @@ const ShippingAddress = () => {
     const shippingsdata = useSelector((state) => state.shipping);
     const shippings = shippingsdata.shippings.ShippingsData;
     const shippingAddresses = shippings.filter(shipping => shipAddressIds.includes(shipping._id));
-    console.log("Shippings Addresses", shippings, shippingAddresses);
+    // console.log("Shippings Addresses", shippings, shippingAddresses);
 
     const showAllAddress = () => {
-        console.log("Show shippings click");
         navigate('/account/shipping');
     }
     const addNewAddress = () => {
-        console.log("Add shipping click");
         navigate('/account/shipping/add');
     }
     return (

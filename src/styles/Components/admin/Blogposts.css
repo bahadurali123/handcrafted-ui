@@ -118,18 +118,7 @@
 .actions-popup button {
     display: block;
     width: 100%;
-    /* padding: 10px;
-    border: none; */
-    /* background-color: var(--secondary-color-dark);
-    color: var(--primary-color-light); */
-    /* cursor: pointer; */
 }
-
-.actions-popup button:hover {
-    /* background-color: #f9f9f9; */
-}
-
-
 
 @media (max-width: 768px) {
     .blog-post-item span {

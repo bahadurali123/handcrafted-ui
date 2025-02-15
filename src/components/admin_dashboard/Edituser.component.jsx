@@ -10,7 +10,7 @@ const EditUserFromAdmin = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const userId = useParams().userId;
-    console.log("Editable user: ", userId);
+    // console.log("Editable user: ", userId);
     const usersdata = useSelector((state) => state.users);
     const users = usersdata.users.usersData;
     const user = users.find(item => item._id === userId);
@@ -24,10 +24,10 @@ const EditUserFromAdmin = () => {
 
     const onSubmit = async (data) => {
         try {
-            console.log("Edit user status", data);
+            // console.log("Edit user status", data);
             const response = await userService.updateUserStatus(user._id, data);
-            console.log("In Update User status: ", response);
-            console.log("In Update User status data: ", response.data);
+            // console.log("In Update User status: ", response);
+            // console.log("In Update User status data: ", response.data);
             if (response) {
                 const userData = response.data;
                 if (userData) {

@@ -26,20 +26,15 @@ const StripeButton = () => {
     const handleCheckout = async () => {
         const stripe = await stripePromise;
 
-        // const { cart } = cartdata;
         const { cart, totalPrice } = cartdata;
-        // const data = {
-        //     totalprice: 25,
-        //     name: 'xyz'
-        // }
         // Create a checkout session via the backend
         const response = await axios.post(`${config.backendBaseUrl}/create-checkout-session`, { cart, totalPrice }, { withCredentials: true, });
 
-        console.log("Stripe Checkout: ", response);
+        // console.log("Stripe Checkout: ", response);
         // Redirect to Stripe Checkout
         const { id } = response.data;
         const result = await stripe.redirectToCheckout({ sessionId: id });
-        console.log("Resurls: ", result);
+        // console.log("Resurls: ", result);
 
         if (result.error) {
             console.error(result.error.message);

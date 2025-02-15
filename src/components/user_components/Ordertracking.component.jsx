@@ -8,7 +8,7 @@ const OrderTracking = () => {
     const Id = useParams();
     const [shipevents, setShipevents] = useState([]);
     const [orderStatus, setOrderStatues] = useState('');
-    console.log("Order Tracking id", Id);
+    // console.log("Order Tracking id", Id);
     const orderdata = useSelector((state) => state.orders);
     const orders = orderdata.orders.ordersData.orders;
     const order = orders.find(item => item.orderShippingId === Id.Id);

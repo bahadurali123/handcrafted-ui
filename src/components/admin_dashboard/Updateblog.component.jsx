@@ -9,13 +9,13 @@ const UpdateBlog = () => {
     const dispatch = useDispatch();
     const postsdata = useSelector((state) => state.blog);
     const posts = postsdata.posts.postsData;
-    console.log("Blog posts: ", posts, blogId);
+    // console.log("Blog posts: ", posts, blogId);
 
     const post = posts.filter(item => item._id === blogId.blogId);
-    console.log("Blog Post for edit is: ", post)
+    // console.log("Blog Post for edit is: ", post)
 
     const handleUpdateBlog = async (data) => {
-        console.log("Blog Updated:", data);
+        // console.log("Blog Updated:", data);
         const formData = new FormData();
         formData.append("title", data.title);
         formData.append("slug", data.slug);
@@ -26,11 +26,11 @@ const UpdateBlog = () => {
         formData.append("publishedAt", data.publishedAt);
         formData.append("status", data.status);
 
-        console.log("FormData", formData);
+        // console.log("FormData", formData);
         try {
             const response = await BlogService.updateBlog(post[0]._id, formData);
-            console.log("In Update Blog: ", response);
-            console.log("In Update Blog data: ", response.data);
+            // console.log("In Update Blog: ", response);
+            // console.log("In Update Blog data: ", response.data);
             if (response) {
                 const blogData = response.data;
                 if (blogData) {

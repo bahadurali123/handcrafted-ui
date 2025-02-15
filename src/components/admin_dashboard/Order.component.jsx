@@ -6,13 +6,13 @@ import { useSelector } from "react-redux";
 
 const AdminOrder = () => {
     const orderId = useParams().orderId;
-    console.log("Order ID: ", orderId);
+    // console.log("Order ID: ", orderId);
     const orderdata = useSelector((state) => state.orders);
     const orders = orderdata.orders.ordersData.orders;
     const ordersShipmentList = orderdata.orders.ordersData.ordersShippings;
     const order = orders.find(item => item._id === orderId);
     const shipment = ordersShipmentList.find(item => item._id === order.orderShippingId);
-    console.log("Order: ", order);
+    // console.log("Order: ", order);
     const [orderStatus, setOrderStatus] = useState(shipment.status);
 
     const handleStatusUpdate = () => {

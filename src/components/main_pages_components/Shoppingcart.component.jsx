@@ -41,8 +41,8 @@ const ShoppingCart = () => {
         }
     };
 
-    console.log("cart data: ", cartdata);
-    console.log("cart products: ", cartproducts);
+    // console.log("cart data: ", cartdata);
+    // console.log("cart products: ", cartproducts);
     return (
         <div className="shopping-cart">
             <h1 className="shopping-cart__title">Shopping Cart</h1>

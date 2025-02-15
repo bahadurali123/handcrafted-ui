@@ -31,7 +31,7 @@ export class AuthService {
   async checkauthorized() {
     try {
       const response = await axios.get(`${this.apiUrl}/checkauth`, { withCredentials: true, });
-      console.log("Check OAuth Response: ", response);
+      // console.log("Check OAuth Response: ", response);
       return response.data;
     } catch (error) {
       this.handleError(error);

@@ -14,14 +14,7 @@ const cartSlice = createSlice({
     name: "cart",
     initialState,
     reducers: {
-        // setLoading: (state, action) => {
-        //     state.loading = action.payload;
-        // },
-        // setError: (state, action) => {
-        //     state.error = action.payload;
-        // },
         addCartProduct: (state, action) => {
-            console.log("Add To Cart Service: ", action.payload);
             const existingProduct = state.cart.find(item => item._id === action.payload.product._id);
             if (existingProduct) {
                 existingProduct.quantity += action.payload.quantity;
@@ -38,8 +31,8 @@ const cartSlice = createSlice({
             state.totalPrice += action.payload.product.price * action.payload.quantity;
             state.totalShipping += action.payload.shippingFee * action.payload.quantity;
         },
+
         updateProductQuantity: (state, action) => {
-            console.log("Cart slice data: ", action.payload);
             const { id, quantity } = action.payload;
             const product = state.cart.find(item => item._id === id);
             if (product) {
@@ -50,6 +43,7 @@ const cartSlice = createSlice({
                 product.totalPrice = product.price * quantity;
             }
         },
+
         removeCartProduct: (state, action) => {
             const product = state.cart.find(item => item._id === action.payload.id);
             if (product) {

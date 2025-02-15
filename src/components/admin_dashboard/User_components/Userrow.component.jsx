@@ -32,7 +32,7 @@ const UserRow = ({ user }) => {
         return format(date, "dd/MM/yyyy");
     };
 
-    console.log("Users Test: ", user, orders);
+    // console.log("Users Test: ", user, orders);
 
     return (
         <tr>

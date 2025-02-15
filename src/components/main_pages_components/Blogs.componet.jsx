@@ -20,7 +20,7 @@ const BlogsPage = () => {
     }
 
     const blogs = posts.postsData;
-    console.log("Data: ", blogs);
+    // console.log("Data: ", blogs);
 
     const categoriesdata = useSelector((state) => state.category);
     const categories = categoriesdata.categories.categoriessData;

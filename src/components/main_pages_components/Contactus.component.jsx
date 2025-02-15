@@ -14,9 +14,9 @@ const ContactUs = () => {
 
     const onSubmit = async (data) => {
         try {
-            console.log("message data: ", data);
+            // console.log("message data: ", data);
             const response = await messageService.createMessage(data);
-            console.log("message Response: ", response);
+            // console.log("message Response: ", response);
             if (response) {
                 reset();
             }

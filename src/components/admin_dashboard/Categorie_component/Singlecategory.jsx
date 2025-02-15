@@ -7,7 +7,7 @@ import { deleteCategory } from "../../../store/slices/category.slice";
 
 // Component for rendering a single category row
 const SingleCategory = ({ category }) => {
-    console.log("category Item: ", category);
+    // console.log("category Item: ", category);
     const categoriesdata = useSelector((state) => state.category);
     const categories = categoriesdata.categories.categoriessData;
     const navigate = useNavigate();

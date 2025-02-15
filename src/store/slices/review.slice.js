@@ -4,8 +4,6 @@ const initialState = {
     status: "handcrafted",
     reviews: [],
     loading: false,
-    // currentReview: null,
-    // error: null
 };
 
 const reviewSlice = createSlice({
@@ -15,9 +13,6 @@ const reviewSlice = createSlice({
         setReviewLoading: (state, action) => {
             state.loading = action.payload;
         },
-        // setError: (state, action) => {
-        //     state.error = action.payload;
-        // },
         loadAllReviews: (state, action) => {
             state.reviews = action.payload;
             state.status = "succeeded";
@@ -36,16 +31,9 @@ const reviewSlice = createSlice({
         // deleteReview: (state, action) => {
         //     state.reviews = state.reviews.filter(review => review.id !== action.payload);
         // },
-        // setCurrentReview: (state, action) => {
-        //     state.currentReview = action.payload;
-        // },
-        // clearCurrentReview: (state) => {
-        //     state.currentReview = null;
-        // }
     }
 });
 
-// export const { setLoading, setError, loadReviews, addReview, updateReview, deleteReview, setCurrentReview, clearCurrentReview } = reviewSlice.actions;
 export const { setReviewLoading, setError, loadAllReviews, addReview, updateReview, deleteReview, setCurrentReview, clearCurrentReview } = reviewSlice.actions;
 
 export default reviewSlice.reducer;

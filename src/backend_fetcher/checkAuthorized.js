@@ -6,7 +6,7 @@ const CheckAuthorized = async (dispatch, navigate, isUserRoute, isAdminRoute) =>
         const response = await authService.checkauthorized();
         if (response) {
             const userData = response.data;
-            console.log("Check OAut Response: ", response, userData);
+            // console.log("Check OAut Response: ", response, userData);
             if (userData) {
                 dispatch(login({ userData }));
             } else {

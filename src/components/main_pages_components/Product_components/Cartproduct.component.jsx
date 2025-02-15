@@ -20,7 +20,7 @@ const CartProduct = ({ product }) => {
         dispatch(updateProductQuantity({ id: product._id, quantity: quantity - 1 }));
     };
     const deleteCartProduct = () => {
-        console.log("Delete Product: ", product.name);
+        // console.log("Delete Product: ", product.name);
         dispatch(removeCartProduct({ id: product._id }));
     }
     return (

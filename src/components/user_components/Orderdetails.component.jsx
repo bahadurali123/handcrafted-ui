@@ -7,7 +7,7 @@ import { format, differenceInCalendarMonths, differenceInCalendarYears } from "d
 const OrderDetails = () => {
     // const navigate = useNavigate();
     const orderId = useParams();
-    console.log("Order Id: ", orderId);
+    // console.log("Order Id: ", orderId);
     const orderdata = useSelector((state) => state.orders);
     const orders = orderdata.orders.ordersData.orders;
     const ordersShipping = orderdata.orders.ordersData.ordersShippings;

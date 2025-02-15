@@ -38,12 +38,12 @@ const OrdersFilterPopup = ({ onClose }) => {
         return result;
     };
     const filteredCategories = filterHierarchy(categories, "6728d5ec46ad752365cab7c9");
-    console.log("Filtered Cat data: ", filteredCategories);
+    // console.log("Filtered Cat data: ", filteredCategories);
 
     const onSubmit = async (data) => {
-        console.log("Hook Form Data is: ", data);
+        // console.log("Hook Form Data is: ", data);
         try {
-            console.log("Orders LIst: ", orders);
+            // console.log("Orders LIst: ", orders);
             const filteredOrdersList = orders.filter(item => {
                 // return item._id === data?.Id
                 return item._id === data?.Id ||
@@ -53,7 +53,7 @@ const OrdersFilterPopup = ({ onClose }) => {
                 // item.categoryId === data?.parentId ||
                 // item.status === data?.status ||
             });
-            console.log("Filtered orders LIst: ", filteredOrdersList);
+            // console.log("Filtered orders LIst: ", filteredOrdersList);
 
             if (filteredOrdersList) {
                 const orderData = filteredOrdersList;

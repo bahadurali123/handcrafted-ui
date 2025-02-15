@@ -13,10 +13,10 @@ const AddShipping = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = async (data) => {
-        console.log("Add Shipping Address Form Data is: ", data);
+        // console.log("Add Shipping Address Form Data is: ", data);
         try {
             const response = await shippingService.createShipping(data);
-            console.log("Add Shipping Response: ", response);
+            // console.log("Add Shipping Response: ", response);
             if (response) {
                 const shippingData = response.data.shipping;
                 const userData = response.data.user;

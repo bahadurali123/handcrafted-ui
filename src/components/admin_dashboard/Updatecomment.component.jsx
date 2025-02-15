@@ -17,11 +17,11 @@ const UpdateCommentStatus = () => {
     const handleUpdate = async () => {
         try {
             const response = await commentService.updateComment(comment._id, { status });
-            console.log("Comment Response: ", response);
+            // console.log("Comment Response: ", response);
             if (response) {
                 if (response.data) {
                     const commentData = response.data;
-                    console.log("Comment Response 1: ", commentData);
+                    // console.log("Comment Response 1: ", commentData);
                     dispatch(updateComment({ commentData }));
                     navigate(-1);
                 }
