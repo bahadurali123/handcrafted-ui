@@ -20,7 +20,7 @@ const Header = () => {
             </div>
             <div className="header-right">
                 {/* <nav className="nav-links" className={` nav-links nav ${isSidebarOpen ? 'open' : 'closed'}`}> */}
-                <button onClick={toggleSidebar} className="menu-icon">
+                <button onClick={toggleSidebar} className="ui-menu-icon">
                     {isSidebarOpen ? <i className="bi bi-x-lg"></i> : <i className="bi bi-list"></i>}
                 </button>
                 <nav className={` nav-links nav ${isSidebarOpen ? 'open' : 'closed'}`}>

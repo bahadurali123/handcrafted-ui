@@ -66,8 +66,13 @@
     text-decoration: none;
 }
 
-.menu-icon {
+.ui-menu-icon {
     display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary-color-light);
 }
 
 @media (max-width: 768px) {
@@ -83,7 +88,7 @@
 }
 
 @media (max-width: 540px) {
-    .menu-icon {
+    .ui-menu-icon {
         display: block;
     }
 

@@ -39,7 +39,7 @@ const Verification = () => {
                     Please check your email
                 </h2>
                 <p className="signup-link">
-                    We ve sent a code to example@handcrafted.com
+                    We've sent a code to your email.
                 </p>
                 <Input
                     type="text"

@@ -33,8 +33,8 @@ const Footer = () => {
                         <Link to="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook"></i></Link>
                         <Link to="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="bi bi-twitter-x"></i></Link>
                         <Link to="https://instagram.com" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram"></i></Link>
-                        <Link to="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i className="bi bi-linkedin"></i></Link>
-                        <Link to="https://github.com" target="_blank" rel="noopener noreferrer"><i className="bi bi-github"></i></Link>
+                        <Link to="https://www.linkedin.com/in/bahadurk" target="_blank" rel="noopener noreferrer"><i className="bi bi-linkedin"></i></Link>
+                        <Link to="https://github.com/bahadurali123" target="_blank" rel="noopener noreferrer"><i className="bi bi-github"></i></Link>
                     </div>
                 </div>
             </div>
