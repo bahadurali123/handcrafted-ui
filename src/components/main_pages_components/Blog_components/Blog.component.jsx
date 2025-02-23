@@ -57,7 +57,7 @@ const Blog = ({ title, imageSrc, date, content }) => {
                     <a href={`https://www.reddit.com/submit?url=${encodeURIComponent(blogUrl)}&title=${encodeURIComponent(title)}`} target="_blank" rel="noopener noreferrer">
                         <i className="bi bi-reddit"></i>
                     </a>
-                    <a onClick={copyToClipboard}>
+                    <a href="#" onClick={copyToClipboard}>
                         <i className="bi bi-link-45deg"></i>
                     </a>
                 </div >
